@@ -11,7 +11,7 @@
 ## 快速搭建openGauss + MCP + LLM的AI Agent应用
 ### 环境准备
 - 安装python3环境，安装uv。
-- 通过容器部署并启动openGauss数据库。
+- 通过容器部署并启动openGauss数据库。(openGauss官网：学习->文档->最新开发版本->安装指南->容器镜像安装）
 - 下载Claude Desktop配合MCP协议进行问答操作。
 
 ### 获取openGauss_mcp_server源码
