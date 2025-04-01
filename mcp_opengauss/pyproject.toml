@@ -1,0 +1,29 @@
+[project]
+name = "mcp-opengauss"
+version = "0.1.0"
+description = "A Model Context Protocol (MCP) server that enables secure interaction with openGauss databases. This server allows AI assistants to list tables, read data, and execute SQL queries through a controlled interface, making database exploration and analysis safer and more structured."
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]>=1.0.0",
+    "psycopg2>=2.9.0"
+]
+[[project.authors]]
+name = "openGauss"
+email = ""
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = [
+    "src/openGauss_mcp_server/**/*.py",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "src"
+]
+
+[project.scripts]
+openGauss_mcp_server = "openGauss_mcp_server:main"
